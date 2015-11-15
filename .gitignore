@@ -2,7 +2,6 @@
 .DS_Store?
 .settings
 .tmp
-.bowerrc
 npm-debug.log
 node_modules/
 public/vendor/
