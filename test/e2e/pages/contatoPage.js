@@ -25,7 +25,8 @@ var contatoPage = function() {
 	};
 
 	this.selecionarPrimeiraEmergenciaDaLista = function() {
-		element(by.css('option[value=0]'))
+		element.all(by.options('contato._id as contato.nome for contato in contatos'))
+			.first()
 			.click();
 	};
 
