@@ -1,7 +1,6 @@
 var config = require('./config')();
 
 exports.config = {
-	//sauceSeleniumAddress: 'localhost:4445/wd/hub',
 	sauceUser: config.sauceUser,
 	sauceKey: config.sauceKey,
 	capabilities: {
@@ -15,7 +14,6 @@ exports.config = {
 
 	onPrepare: function() {
 		browser.driver.get('http://localhost:3000/#/auth');
-		//browser.driver.sleep(10000);
 		browser.driver.findElement(by.id('entrar'))
 			.click();
 		// Login no GitHub
