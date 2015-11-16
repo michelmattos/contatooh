@@ -1,4 +1,14 @@
+var config = require('./config')();
+
 exports.config = {
+	sauceUser: config.sauceUser,
+	sauceKey: config.sauceKey,
+	capabilities: {
+		'name': config.sauceTestName,
+		'browserName': 'chrome',
+		'tunnel-identifier': config.travisJobNumber,
+		'build': config.travisBuild
+	},
 	
 	specs: ['../test/e2e/**/*.js'],
 
@@ -8,9 +18,9 @@ exports.config = {
 			.click();
 		// Login no GitHub
 		browser.driver.findElement(by.id('login_field'))
-			.sendKeys('usertest-github');
+			.sendKeys(config.seleniumUser);
 		browser.driver.findElement(by.id('password'))
-			.sendKeys('usertest123');
+			.sendKeys(config.seleniumUserPassword);
 		browser.driver.findElement(by.name('commit'))
 			.click();
 	}
