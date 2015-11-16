@@ -1,7 +1,7 @@
 var config = require('./config')();
 
 exports.config = {
-	sauceSeleniumAddress: 'localhost:4445/wd/hub',
+	//sauceSeleniumAddress: 'localhost:4445/wd/hub',
 	sauceUser: config.sauceUser,
 	sauceKey: config.sauceKey,
 	capabilities: {
