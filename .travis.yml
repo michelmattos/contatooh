@@ -2,7 +2,8 @@ language: node_js
 node_js:
   - 5.0
 notifications:
-  - mattos.michel@gmail.com
+  email:
+    - mattos.michel@gmail.com
 env:
   global:
     - NODE_ENV: test
