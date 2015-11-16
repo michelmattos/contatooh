@@ -15,7 +15,7 @@ exports.config = {
 
 	onPrepare: function() {
 		browser.driver.get('http://localhost:3000/');
-		//browser.driver.sleep(10000);
+		browser.driver.sleep(4000);
 		browser.driver.findElement(by.id('entrar'))
 			.click();
 		// Login no GitHub
